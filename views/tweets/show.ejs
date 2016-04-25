@@ -1,1 +1,5 @@
-<p class="tweet"><%= tweet %></p>
+<% if (tweet) { %>
+  <p class="tweet"><%= tweet %></p>
+<% } else { %>
+  Couldn't find that tweet ¯\_(ツ)_/¯...
+<% } %>

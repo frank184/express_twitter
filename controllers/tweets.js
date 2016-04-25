@@ -1,15 +1,13 @@
 var accepts = require('accepts')
 
-var tweets = []
+var title = 'Twitter',
+    header = 'Welcome to Twitter',
+    tweets = []
 exports.index = function(req, res) {
-  var title = 'Twitter',
-      header = 'Welcome to Twitter'
-
   res.render('tweets/index', {
       'title': title,
       'header': header,
-      'tweets': tweets,
-      stylesheets: ['/public/style.css']
+      'tweets': tweets
   })
 }
 
@@ -37,5 +35,11 @@ exports.create = function(req, res) {
 }
 
 exports.show = function(req, res) {
-
+  var id = req.params.id - 1
+  tweet = tweets[id]
+  res.render('tweets/show', {
+      'title': title,
+      'header': header,
+      'tweet': tweet
+  })
 }

@@ -10,4 +10,5 @@ module.exports = function(app) {
   // Tweets
   app.get(['/tweets', '/tweets/index'], tweets.index)
   app.post('/tweets/create', tweets.create)
+  app.get('/tweets/:id', tweets.show)
 }
