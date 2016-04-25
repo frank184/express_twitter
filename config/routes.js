@@ -3,7 +3,7 @@ var tweets = require('../controllers/tweets')
 module.exports = function(app) {
 
   // Root
-  app.get('/', function(req, res) {
+  app.get(['/', '/index'], function(req, res) {
     res.redirect(302, '/tweets')
   })
 
