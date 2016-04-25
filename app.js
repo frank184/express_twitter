@@ -13,6 +13,7 @@ app.listen(3000, function() {
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
+app.set('layout', 'application/layout')
 app.use(expressLayouts)
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(__dirname + '/public'))
